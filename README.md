@@ -27,3 +27,8 @@ $ rosrun map_server map_saver -f <map_name>
 ```bash
 $ roslaunch morai_sim_example grid_searching.launch
 ```
+
+## Future Works
+- GridMap을 CostMap으로 업데이트하여 경로 생성 (좁은 구역을 가지 않도록 변경)
+- 생성된 경로를 Smoothing하여 차량으로 갈 수 있는 경로로 생성
+- 경로 생성 시작 시, 차량의 헤딩각 고려하기
