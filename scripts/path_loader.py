@@ -4,7 +4,6 @@
 import sys
 import rospy
 import rospkg
-from morai_msgs.msg  import EgoVehicleStatus # Message for get Vehicle Position
 from math import pi, cos, sin, pi, sqrt, pow
 from nav_msgs.msg import Path # Message for make Path
 import tf

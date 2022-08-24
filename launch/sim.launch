@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find rosbridge_server)/launch/rosbridge_websocket.launch" />
+    <node name="upper_controller" pkg="wego" type="high_level_controller.py" output="log"/>
+</launch>
