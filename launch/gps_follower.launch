@@ -1,0 +1,10 @@
+<launch>
+    <node name="path_loader" pkg="wego" type="path_loader.py" args="path test" output="screen"/>
+    <node name="pure_pursuit" pkg="wego" type="pure_pursuit.py" output="log">
+        <param name="lookahead_distance" value="1.0"/>
+        <param name="path_error_distance" value="3.0"/>
+        <param name="wheelbase" value="0.26"/>
+        <param name="speed" value="2.0"/>
+    </node>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find wego)/rviz/gps_follower.rviz"/>
+</launch>

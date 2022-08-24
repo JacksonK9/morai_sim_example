@@ -20,7 +20,7 @@ class HighLevelController(object):
     
     def cmd_vel_callback(self, _data):
         motor = _data.linear.x * 1000
-        servo = _data.angular.z * 0.5 / 0.34 + 0.5
+        servo = -_data.angular.z * 0.5 / 0.34 + 0.5
         if servo < 0.0: servo = 0.0
         elif servo > 1.0: servo = 1.0
         self.motor_pub.publish(motor)
